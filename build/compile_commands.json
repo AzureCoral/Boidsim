@@ -1,0 +1,8 @@
+[
+{
+  "directory": "/Users/arjanchakravarthy/Desktop/Desktop - Arjan’s MacBook Pro/Coding/Boidsim/build",
+  "command": "/Library/Developer/CommandLineTools/usr/bin/c++  -isystem /usr/local/include -std=gnu++17 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX13.0.sdk -o CMakeFiles/SFMLApp.dir/main.cpp.o -c \"/Users/arjanchakravarthy/Desktop/Desktop - Arjan’s MacBook Pro/Coding/Boidsim/main.cpp\"",
+  "file": "/Users/arjanchakravarthy/Desktop/Desktop - Arjan’s MacBook Pro/Coding/Boidsim/main.cpp",
+  "output": "CMakeFiles/SFMLApp.dir/main.cpp.o"
+}
+]
