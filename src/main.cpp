@@ -3,7 +3,7 @@
 #include <SFML/System.hpp>
 
 int main() {
-    sf::RenderWindow window(sf::VideoMode(300, 300), "First window");
+    sf::RenderWindow window(sf::VideoMode(800, 300), "First window");
 
     while (window.isOpen()) {
         sf::Event event;
