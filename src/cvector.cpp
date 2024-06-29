@@ -52,17 +52,31 @@ CVector& CVector::operator/=(const float& s) {
     return *this;
 }
 
-CVector CVector::normalized() {
+CVector CVector::normalized() const {
     float mag = magnitude();
     return CVector(x / mag, y / mag);
 }
 
-float CVector::magnitude() {
-    return sqrt(x*x, y*y);
+float CVector::magnitude() const {
+    return sqrt(x*x + y*y);
+}
+
+float CVector::distance(const CVector& v) {
+    float dx = x - v.x;
+    float dy = y - v.y;
+    return sqrt(dx*dx + dy*dy);
 }
 
 float CVector::dotProduct(const CVector& v) {
     return x*v.x + y*v.y;
+}
+
+CVector CVector::cap(float m) {
+    float curr_mag =  magnitude();
+    if (curr_mag > m) {
+        return normalized() * m;
+    }
+    return *this;
 }
 
 float CVector::angle(const CVector& v) {

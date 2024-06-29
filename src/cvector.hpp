@@ -1,8 +1,6 @@
 #ifndef CVECTOR_HPP
 #define CVECTOR_HPP
 
-#include <iostream>
-
 class CVector {
 public:
     float x, y;
@@ -23,8 +21,10 @@ public:
     CVector& operator*=(const float& s);
     CVector& operator/=(const float& s);
 
-    CVector normalized();
-    float magnitude();
+    CVector normalized() const;
+    float magnitude() const;
+    float distance(const CVector& v);
+    CVector cap(float m);
     float dotProduct(const CVector& v);
     float angle(const CVector& v);
 };
