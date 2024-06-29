@@ -11,12 +11,12 @@ class Boid {
         Vector2 acc;
 
         Boid(float x, float y);
-        void update_pos(const std::vector<Boid>& boids);
+        void update();
 
     private:
-        Vector2 alignment(const std::vector<Boid>& boids);
-        Vector2 cohesion(const std::vector<Boid>& boids);
-        Vector2 separation(const std::vector<Boid>& boids);
+        Vector2 alignment(std::vector<Boid>& boids);
+        Vector2 separation(std::vector<Boid>& boids);
+        Vector2 cohesion(std::vector<Boid>& boids);
 };
 
 #endif // BOID_HPP
