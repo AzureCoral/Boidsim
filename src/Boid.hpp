@@ -10,7 +10,7 @@ class Boid {
         CVector vel;
         float mass;
 
-        Boid(float x, float y, float mass = 1.0);
+        Boid(CVector pos, CVector vel, float mass = 1.0);
         float calc_distance(Boid& other);
         void update(std::vector<Boid>& boids);
 

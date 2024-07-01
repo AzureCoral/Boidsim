@@ -7,9 +7,9 @@
 //Dist threshold constant
 //maximum velocity, acceleration constants
 
-Boid::Boid(float x, float y, float mass) {
-    pos = CVector(x, y);
-    vel = CVector(0, 0);
+Boid::Boid(CVector p, CVector v, float mass) {
+    pos = p;
+    vel = v;
 }
 
 float Boid::calc_distance(Boid& other) {
