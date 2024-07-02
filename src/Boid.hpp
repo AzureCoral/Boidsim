@@ -20,7 +20,7 @@ class Boid {
         CVector cohesion(std::vector<Boid>& boids);
 
         static constexpr float DIST_THRESHOLD = 50.0;
-        static constexpr float MAX_VEL = 2.0;
+        static constexpr float MAX_VEL = 1000.0;
         static constexpr float ALIGN_FACTOR = 1.0;
         static constexpr float SEPARATION_FACTOR = 1.5;
         static constexpr float COHESION_FACTOR = 1.0;

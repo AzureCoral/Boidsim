@@ -1,11 +1,6 @@
 #include "Boid.hpp"
 #include "cvector.hpp"
-#include <cmath>
 #include <vector>
-
-
-//Dist threshold constant
-//maximum velocity, acceleration constants
 
 Boid::Boid(CVector p, CVector v, float mass) {
     pos = p;
