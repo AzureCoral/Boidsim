@@ -19,7 +19,7 @@ class Boid {
         CVector separation(std::vector<Boid>& boids);
         CVector cohesion(std::vector<Boid>& boids);
 
-        bool in_bounds(CVector& v);
+        bool in_bounds();
 };
 
 #endif // BOID_HPP

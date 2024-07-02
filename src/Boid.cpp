@@ -15,7 +15,16 @@ float Boid::calc_distance(Boid& other) {
 void Boid::update(std::vector<Boid>& boids) {
     vel += alignment(boids) + separation(boids) + cohesion(boids);
     vel = vel.cap(Config::MAX_VEL);
+
+    if (!in_bounds()) {
+        vel *= -1;
+    }
+
     pos += vel;
+}
+
+bool Boid::in_bounds() {
+    return pos.x >= 0 && pos.x < Config::WINDOW_WIDTH && pos.y >= 0 && pos.y < Config::WINDOW_HEIGHT;
 }
 
 CVector Boid::alignment(std::vector<Boid>& boids) {
