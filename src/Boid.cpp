@@ -18,15 +18,14 @@ void Boid::update(std::vector<Boid>& boids) {
     vel = vel.cap(Config::MAX_VEL);
 
     pos += vel;
-    rebound_handling();  // Handle rebound with acceleration
+    rebound_handling();
 }
 
 void Boid::rebound_handling() {
     float boid_radius = Config::BOID_SIZE / 2;
     float wall_threshold = 50;
-    float repulsion_strength = 100; // Adjust as needed
+    float repulsion_strength = 100;
 
-    // Check and apply acceleration based on distance to the left and right walls
     if (pos.x - boid_radius < wall_threshold) {
         float distance = pos.x - boid_radius;
         float acceleration = repulsion_strength / distance;
@@ -37,7 +36,6 @@ void Boid::rebound_handling() {
         vel.x -= acceleration;
     }
 
-    // Check and apply acceleration based on distance to the top and bottom walls
     if (pos.y - boid_radius < wall_threshold) {
         float distance = pos.y - boid_radius;
         float acceleration = repulsion_strength / distance;
@@ -48,7 +46,6 @@ void Boid::rebound_handling() {
         vel.y -= acceleration;
     }
 
-    // Invert velocity to simulate rebound
     if (pos.x - boid_radius < 0 || pos.x + boid_radius > Config::WINDOW_WIDTH) {
         vel.x *= -1;
     }
