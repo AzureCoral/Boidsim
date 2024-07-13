@@ -10,7 +10,7 @@ int main() {
     sf::RenderWindow window(sf::VideoMode(Config::WINDOW_WIDTH, Config::WINDOW_HEIGHT), "Boid Simulation");
 
     std::vector<Boid> boids;
-    for (int i = 0; i < 100; i++) {
+    for (int i = 0; i < 25; i++) {
         float init_pos_x = (rand() % Config::WINDOW_WIDTH);
         float init_pos_y = (rand() % Config::WINDOW_HEIGHT);
 
@@ -32,9 +32,9 @@ int main() {
 
         for (auto& b: boids) {
             b.update(boids);
-            sf::CircleShape shape(5.f);
-            shape.setPosition(b.pos.y, b.pos.x);
-            shape.setFillColor(sf::Color::Black);
+            sf::CircleShape shape(Config::BOID_SIZE);
+            shape.setPosition(b.pos.x, b.pos.y);
+            shape.setFillColor(sf::Color::Red);
             window.draw(shape);
         }
 

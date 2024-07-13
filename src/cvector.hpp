@@ -24,6 +24,7 @@ public:
     CVector normalized() const;
     float magnitude() const;
     float distance(const CVector& v);
+    float tor_distance(const CVector& v);
     CVector cap(float m);
     float dotProduct(const CVector& v);
     float angle(const CVector& v);

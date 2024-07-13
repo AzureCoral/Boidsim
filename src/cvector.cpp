@@ -67,6 +67,12 @@ float CVector::distance(const CVector& v) {
     return sqrt(dx*dx + dy*dy);
 }
 
+float CVector::tor_distance(const CVector& v) {
+    float dy = y - v.y;
+    float dx = fmin(abs(x - v.x), 800 - abs(x - v.x));
+    return sqrt(dx*dx + dy*dy);
+}
+
 float CVector::dotProduct(const CVector& v) {
     return x*v.x + y*v.y;
 }
