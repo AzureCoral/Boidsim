@@ -18,6 +18,7 @@ public:
     
     CVector& operator+=(const CVector& v);
     CVector& operator-=(const CVector& v);
+    CVector& operator-=(const float& s);
     CVector& operator*=(const float& s);
     CVector& operator/=(const float& s);
 
@@ -27,7 +28,6 @@ public:
     float tor_distance(const CVector& v);
     CVector cap(float m);
     float dotProduct(const CVector& v);
-    float angle(const CVector& v);
 };
 
 #endif // !CVECTOR_HPP

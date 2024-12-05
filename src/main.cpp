@@ -10,7 +10,7 @@ int main() {
     sf::RenderWindow window(sf::VideoMode(Config::WINDOW_WIDTH, Config::WINDOW_HEIGHT), "Boid Simulation");
 
     std::vector<Boid> boids;
-    for (int i = 0; i < 25; i++) {
+    for (int i = 0; i < Config::NUM_BOIDS; i++) {
         float init_pos_x = (rand() % Config::WINDOW_WIDTH);
         float init_pos_y = (rand() % Config::WINDOW_HEIGHT);
 

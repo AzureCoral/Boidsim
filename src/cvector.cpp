@@ -40,6 +40,12 @@ CVector& CVector::operator-=(const CVector& v) {
     return *this;
 }
 
+CVector& CVector::operator-=(const float& s) {
+    x -= s;
+    y -= s;
+    return *this;
+}
+
 CVector& CVector::operator*=(const float& s) {
     x *= s;
     y *= s;
@@ -85,8 +91,3 @@ CVector CVector::cap(float m) {
     return *this;
 }
 
-float CVector::angle(const CVector& v) {
-    CVector a = normalized();
-    CVector b = v.normalized();
-    return acos(a.dotProduct(b));
-}
